@@ -50,3 +50,49 @@ sw $1, 4($1) # ocorre stall
 
 ![Circuito do fowarding](./pictures/img06.png)
 
+#Progama teste
+
+<p>
+  Considere o seguinte progama que contém vários hazards de dados e a memória de dados incializada com os valores 7 e 11 nos endereços 0000 e 0001:<br>
+addi $1, $0, 20<br>
+subi $2, $1, 10<br>
+muli $3, $2, 3<br>
+divi $4, $1, 5<br>
+add $5, $4, $4<br>
+sub $6, $3, $5<br>
+mul $7, $5, $5<br>
+div $8, $3, $2<br>
+or $9, $8, $6<br>
+and $10, $9, $9<br>
+sll $11, $2, 3<br>
+slr $12, $11, 2<br>
+slt $13, $12, $11<br>
+slti $14, $13, 100<br>
+lw $15, 0($0)<br>
+add $16, $15, $15<br>
+sw $16, 8($0)<br>
+lw $17, 4($0)<br>
+sw $17, 12($0)<br>
+  Cujo código em hexadeciamal é:<br>
+04010014<br>
+0822000a<br>
+0c430003<br>
+10240005<br>
+00842800<br>
+00653001<br>
+00a53802<br>
+00624003<br>
+01064805<br>
+01295004<br>
+344b00c7<br>
+396c0088<br>
+018b6806<br>
+29ae0064<br>
+1c0f0000<br>
+01ef8000<br>
+20100008<br>
+1c110004<br>
+2011000c<br>
+Ao final do programa os seguintes valores devem ser encontrados nos registradores do 1 ao 17 respectivamente:
+  20, 10, 30, 4, 8, 22, 64, 3, 23, 24, 80, 20, 1, 1, 7, 14 e 11. Na memória de dados, serão carregados nos endereços 0002 e 0003 os valores 14 e 11. 
+</p>
