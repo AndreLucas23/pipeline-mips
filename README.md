@@ -50,7 +50,7 @@ sw $1, 4($1) # ocorre stall
 
 ![Circuito do fowarding](./pictures/img06.png)
 
-#Progama teste
+# Progama teste
 
 <p>
   Considere o seguinte progama que contém vários hazards de dados e a memória de dados incializada com os valores 7 e 11 nos endereços 0000 e 0001:<br>
